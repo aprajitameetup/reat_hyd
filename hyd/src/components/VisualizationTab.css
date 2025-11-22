@@ -28,7 +28,24 @@
 .chart-header h2 {
   font-size: 2rem;
   font-weight: 700;
-  background-clip: text;
+  margin: 0;
+  position: relative;
+}
+
+.chart-title-gradient {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-size: 100% 100% !important;
+  display: inline-block;
+}
+
+/* Fallback for browsers that don't support gradient text */
+@supports not (-webkit-background-clip: text) {
+  .chart-title-gradient {
+    -webkit-text-fill-color: inherit !important;
+    color: inherit !important;
+  }
 }
 
 .status-indicator {

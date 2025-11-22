@@ -12,13 +12,13 @@ function InfoSlide({ content, color = '#667eea' }) {
     const getGifForProtocol = () => {
       const gifMap = {
         'waiting impatiently': [
-          // HTTP Polling - waiting, checking, polling, refresh
-          'https://media.giphy.com/media/l0MYC0LajMaPoKHCM/giphy.gif', // Checking watch repeatedly
-          'https://media.giphy.com/media/3o7aCTPPm4OHfRLSH6/giphy.gif', // Waiting impatiently
-          'https://media.giphy.com/media/l46CyJmS9KUbokzs0/giphy.gif', // Checking phone repeatedly
-          'https://media.giphy.com/media/3o7abldb0xltq2n5fq/giphy.gif', // Impatient tapping
-          'https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif', // Refresh/reload animation
-          'https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif' // Clock watching
+          // HTTP Polling - futuristic tech GIFs (moved from WebTransport)
+          'https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif', // Futuristic tech
+          'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif', // Advanced technology
+          'https://media.giphy.com/media/3o7aCTPPm4OHfRLSH6/giphy.gif', // Modern tech
+          'https://media.giphy.com/media/3o7aD2saal8vX3f7O8/giphy.gif', // Next-gen
+          'https://media.giphy.com/media/l46CyJmS9KUbokzs0/giphy.gif', // Multiple streams
+          'https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif' // High-tech
         ],
         'real-time communication': [
           // WebSocket - bidirectional, real-time, instant, two-way
@@ -39,13 +39,13 @@ function InfoSlide({ content, color = '#667eea' }) {
           'https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif' // Data reception
         ],
         'futuristic technology': [
-          // WebTransport - futuristic, multiple streams, advanced, next-gen
-          'https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif', // Futuristic tech
-          'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif', // Advanced technology
-          'https://media.giphy.com/media/3o7aCTPPm4OHfRLSH6/giphy.gif', // Modern tech
-          'https://media.giphy.com/media/3o7aD2saal8vX3f7O8/giphy.gif', // Next-gen
-          'https://media.giphy.com/media/l46CyJmS9KUbokzs0/giphy.gif', // Multiple streams
-          'https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif' // High-tech
+          // WebTransport - super futuristic, sci-fi, advanced tech, next-gen
+          'https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif', // Futuristic network
+          'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif', // Advanced tech flow
+          'https://media.giphy.com/media/3o7aD2saal8vX3f7O8/giphy.gif', // Next-gen technology
+          'https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif', // High-tech future
+          'https://media.giphy.com/media/l46CyJmS9KUbokzs0/giphy.gif', // Futuristic streams
+          'https://media.giphy.com/media/3o7aCTPPm4OHfRLSH6/giphy.gif' // Modern advanced tech
         ]
       }
       

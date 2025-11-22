@@ -323,7 +323,16 @@ function VisualizationTab() {
         className="visualization-container"
       >
         <div className="chart-header">
-          <h2 style={{ background: currentProtocol.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <h2 
+            className="chart-title-gradient"
+            style={{ 
+              background: currentProtocol.gradient, 
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              color: currentProtocol.color
+            }}
+          >
             {currentProtocol.name} Visualization
           </h2>
           <div className={`status-indicator ${isConnected[selectedProtocol] ? 'connected' : 'disconnected'}`}>
