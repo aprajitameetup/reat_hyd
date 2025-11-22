@@ -1,0 +1,229 @@
+.visualization-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.protocol-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.visualization-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.chart-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  background-clip: text;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.status-indicator.connected {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.status-indicator.disconnected {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.status-indicator .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse 2s infinite;
+}
+
+.chart-wrapper {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+}
+
+.protocol-diagram {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.protocol-diagram h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.diagram {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  min-height: 200px;
+  position: relative;
+  gap: 2rem;
+}
+
+.diagram-box {
+  padding: 1.5rem 2rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-width: 140px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.diagram-connection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 2rem;
+}
+
+.arrow {
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.arrow.request {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.arrow.response {
+  border-color: #764ba2;
+  color: #764ba2;
+}
+
+.arrow.both {
+  border-color: #f5576c;
+  color: #f5576c;
+}
+
+.arrow.unidirectional {
+  border-color: #00f2fe;
+  color: #00f2fe;
+}
+
+.bidirectional-arrow {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgba(245, 87, 108, 0.2) 0%, rgba(245, 87, 108, 0.1) 100%);
+  border: 2px solid #f5576c;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #f5576c;
+}
+
+.multiplexed-connection {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgba(56, 249, 215, 0.2) 0%, rgba(56, 249, 215, 0.1) 100%);
+  border: 2px solid #38f9d7;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #38f9d7;
+  font-size: 1.1rem;
+}
+
+.arrow-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.http-diagram {
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.http-diagram .diagram-client,
+.http-diagram .diagram-server {
+  flex-shrink: 0;
+}
+
+.http-diagram .diagram-connection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 1rem;
+  min-width: 300px;
+  position: relative;
+  height: 120px;
+}
+
+.http-diagram .arrow {
+  position: absolute;
+  width: auto;
+}
+
+.websocket-diagram,
+.sse-diagram,
+.webtransport-diagram {
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.websocket-diagram .diagram-connection,
+.sse-diagram .diagram-connection,
+.webtransport-diagram .diagram-connection {
+  min-width: 250px;
+}
+
+.webtransport-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(56, 249, 215, 0.1) 0%, rgba(56, 249, 215, 0.05) 100%);
+  border: 1px solid #38f9d7;
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.webtransport-note strong {
+  color: #38f9d7;
+}
